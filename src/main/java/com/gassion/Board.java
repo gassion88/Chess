@@ -13,6 +13,11 @@ public class Board {
     }
 
     public void setupDefaultPeacesPositions() {
+        for (File file :
+                File.values()) {
+            setPieces(new Coordinates(file, 2), new Pawn(Color.WHITE, new Coordinates(file, 2)));
+            setPieces(new Coordinates(file, 7), new Pawn(Color.BLACK, new Coordinates(file, 7)));
+        }
 
     }
 }
