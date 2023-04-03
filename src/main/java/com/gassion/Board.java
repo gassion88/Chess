@@ -20,4 +20,8 @@ public class Board {
         }
 
     }
+
+    public static Boolean isSquareDark(Coordinates coordinates) {
+        return (((coordinates.file.ordinal() + 1) + coordinates.rank) % 2) == 0;
+    }
 }
