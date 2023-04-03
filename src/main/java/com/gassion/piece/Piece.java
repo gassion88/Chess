@@ -1,4 +1,7 @@
-package com.gassion;
+package com.gassion.piece;
+
+import com.gassion.Color;
+import com.gassion.Coordinates;
 
 abstract public class Piece {
    public final Color color;
