@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f4e097-eefe-42da-a667-c21c9dbcf4c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gassion/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680519166418</updated>
-      <workItem from="1680519167851" duration="2578000" />
+      <workItem from="1680519167851" duration="3747000" />
     </task>
     <servers />
   </component>
