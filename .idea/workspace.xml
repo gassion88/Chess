@@ -4,14 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33f4e097-eefe-42da-a667-c21c9dbcf4c3" name="Changes" comment="" />
+    <list default="true" id="33f4e097-eefe-42da-a667-c21c9dbcf4c3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gassion/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -21,7 +39,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Nug19FCAEjwz5hqH2DB4ymnFec" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +61,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gassion" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680519166418</updated>
-      <workItem from="1680519167851" duration="438000" />
+      <workItem from="1680519167851" duration="2578000" />
     </task>
     <servers />
   </component>
