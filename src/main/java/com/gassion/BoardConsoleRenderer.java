@@ -45,7 +45,7 @@ public class BoardConsoleRenderer {
 
 
     private String getStringForEmptySquare(Coordinates coordinates) {
-        return colorizeSprite("     ", Color.WHITE, Board.isSquareDark(coordinates));
+        return colorizeSprite("      ", Color.WHITE, Board.isSquareDark(coordinates));
     }
 
     private String getPieceSprite(Piece piece) {
