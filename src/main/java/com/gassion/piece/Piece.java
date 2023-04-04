@@ -23,7 +23,7 @@ abstract public class Piece {
             if (coordinates.canShift(shift)) {
                 Coordinates newCoordinates = coordinates.shift(shift);
 
-                if (isSquareAvailableForMove(coordinates, board)) {
+                if (isSquareAvailableForMove(newCoordinates, board)) {
                     result.add(newCoordinates);
                 }
             }

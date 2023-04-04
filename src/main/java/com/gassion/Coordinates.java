@@ -19,8 +19,8 @@ public class Coordinates {
         int newFile = this.file.ordinal() + shift.fileShift;
         int newRank = this.rank + shift.rankShift;
 
-        if (newFile < 0 || newFile > 8) return false;
-        if (newRank < 0 || newRank > 8) return false;
+        if ((newFile < 0) || (newFile > 7)) return false; // 0..7 - good
+        if ((newRank < 1) || (newRank > 8)) return false;
 
         return true;
     }
