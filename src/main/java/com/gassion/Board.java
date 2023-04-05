@@ -52,4 +52,15 @@ public class Board {
     public Piece getPiece(Coordinates coordinates) {
         return pieces.get(coordinates);
     }
+
+    public void removePiece(Coordinates coordinates) {
+        pieces.remove(coordinates);
+    }
+
+    public void movePiece(Coordinates from, Coordinates to) {
+        Piece piece = getPiece(from);
+
+        removePiece(from);
+        setPiece(to, piece);
+    }
 }
