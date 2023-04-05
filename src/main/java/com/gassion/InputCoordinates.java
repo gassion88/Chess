@@ -8,7 +8,7 @@ import java.util.Set;
 public class InputCoordinates {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static Coordinates input() {
+    private static Coordinates input() {
         while (true) {
             System.out.println("Please enter coordinates ex: A1");
 
@@ -74,8 +74,10 @@ public class InputCoordinates {
     }
 
     public static void main(String[] args) {
-        Coordinates coordinates = input();
+        Board board = new Board();
+        board.setupDefaultPeacesPositions();
 
-        System.out.println("Coordinates :" + coordinates);
+        Coordinates coordinates = inputPieceCoordinatesForColor(Color.WHITE, board);
+        System.out.println(coordinates);
     }
 }
