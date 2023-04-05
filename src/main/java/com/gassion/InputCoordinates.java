@@ -73,6 +73,22 @@ public class InputCoordinates {
         }
     }
 
+    public static Coordinates inputAvailableSquare(Set<Coordinates> coordinates) {
+        while (true) {
+            System.out.println("Enter move for selected piece");
+            Coordinates input = input();
+
+            if (!coordinates.contains(input)) {
+                System.out.println("Non available square");
+                continue;
+            }
+
+            return input;
+        }
+
+
+    }
+
     public static void main(String[] args) {
         Board board = new Board();
         board.setupDefaultPeacesPositions();
