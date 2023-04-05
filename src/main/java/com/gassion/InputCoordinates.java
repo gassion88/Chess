@@ -1,6 +1,9 @@
 package com.gassion;
 
+import com.gassion.piece.Piece;
+
 import java.util.Scanner;
+import java.util.Set;
 
 public class InputCoordinates {
     private static final Scanner scanner = new Scanner(System.in);
@@ -41,6 +44,32 @@ public class InputCoordinates {
             }
 
             return new Coordinates(file, rank);
+        }
+    }
+
+    public static Coordinates inputPieceCoordinatesForColor(Color color, Board board) {
+        while (true) {
+            System.out.println("Enter coordinates for piece move");
+
+            Coordinates coordinates = input();
+            if (board.isSquareEmpty(coordinates)) {
+                System.out.println("You have chosen an empty square");
+                continue;
+            }
+
+            Piece piece = board.getPiece(coordinates);
+            if (piece.color != color) {
+                System.out.println("Wrong Color");
+                continue;
+            }
+
+            Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
+            if (availableMoveSquares.size() == 0) {
+                System.out.println("Blocked figure");
+                continue;
+            }
+
+            return coordinates;
         }
     }
 
