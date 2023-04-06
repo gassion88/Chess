@@ -18,6 +18,12 @@ public class Game {
         while (true) {
             boardConsoleRenderer.render(board);
 
+            if (isWhiteToMove) {
+                System.out.println("White to move");
+            } else {
+                System.out.println("Black to move");
+            }
+
             Coordinates sourceCoordinates = InputCoordinates.inputPieceCoordinatesForColor(
                     isWhiteToMove ? Color.WHITE : Color.BLACK, board
             );
