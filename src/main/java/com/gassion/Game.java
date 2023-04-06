@@ -30,6 +30,7 @@ public class Game {
 
             Piece piece = board.getPiece(sourceCoordinates);
             Set<Coordinates> availableMoveSquare = piece.getAvailableMoveSquares(board);
+            boardConsoleRenderer.render(board, piece);
             Coordinates targerCoordinates = InputCoordinates.inputAvailableSquare(availableMoveSquare);
 
             board.movePiece(sourceCoordinates, targerCoordinates);

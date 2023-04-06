@@ -15,8 +15,8 @@ public class Main {
 //        Piece piece = board.getPiece(new Coordinates( File.B, 1));
 //        Set<Coordinates> coordinates = piece.getAvailableMoveSquares(board);
 
-//        Game game = new Game(board);
-//        game.gameLoop();
+        Game game = new Game(board);
+        game.gameLoop();
 
     }
 }
