@@ -4,6 +4,7 @@ import com.gassion.piece.Pawn;
 import com.gassion.piece.Piece;
 
 public class BoardFactory {
+    private PieceFactory pieceFactory = new PieceFactory();
     public Board fromFen(String fen) {
         Board board = new Board();
         String[] parts = fen.split(" ");
@@ -25,7 +26,7 @@ public class BoardFactory {
                     File file = File.values()[fileIndex];
                     Coordinates coordinates = new Coordinates(file, rank);
 
-                    board.setPiece(coordinates, new Pawn(Color.WHITE, coordinates));
+                    board.setPiece(coordinates, pieceFactory.getPieceForChar(fenChar, coordinates));
                     fileIndex++;
                 }
             }
