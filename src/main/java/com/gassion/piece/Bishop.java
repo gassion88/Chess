@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Bishop extends Piece {
+public class Bishop extends LongRangePiece {
     public Bishop(Color color, Coordinates coordinates) {
         super(color, coordinates);
     }
@@ -31,24 +31,5 @@ public class Bishop extends Piece {
         }
 
         return result;
-    }
-
-    @Override
-    protected boolean isSquareAvailableForMove(Coordinates coordinates, Board board) {
-        boolean result = super.isSquareAvailableForMove(coordinates, board);
-
-        if (result) {
-            List<Coordinates> coordinatesBetween = BoardUtils.getDiagonalCoordinatesBetween(this.coordinates, coordinates);
-
-            for (Coordinates c : coordinatesBetween) {
-                if (!board.isSquareEmpty(c)) {
-                    return false;
-                }
-            }
-            return true;
-        } else {
-            return false;
-        }
-
     }
 }

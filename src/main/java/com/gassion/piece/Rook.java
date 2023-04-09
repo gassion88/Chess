@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Rook extends Piece {
+public class Rook extends LongRangePiece {
     public Rook(Color color, Coordinates coordinates) {
         super(color, coordinates);
     }
@@ -31,29 +31,5 @@ public class Rook extends Piece {
         }
 
         return result;
-    }
-
-    @Override
-    protected boolean isSquareAvailableForMove(Coordinates coordinates, Board board) {
-        boolean result = super.isSquareAvailableForMove(coordinates, board);
-
-        if (result) {
-            List<Coordinates> coordinatesBetween;
-
-            if (this.coordinates.file == coordinates.file) {
-                coordinatesBetween = BoardUtils.getVerticalCoordinatesBetween(this.coordinates, coordinates);
-            } else {
-                coordinatesBetween = BoardUtils.getHorizontalCoordinatesBetween(this.coordinates, coordinates);
-            }
-
-            for (Coordinates c : coordinatesBetween) {
-                if (!board.isSquareEmpty(c)) {
-                    return false;
-                }
-            }
-            return true;
-        } else {
-            return false;
-        }
     }
 }
