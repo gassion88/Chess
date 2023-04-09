@@ -2,7 +2,10 @@ package com.gassion;
 
 import com.gassion.piece.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 public class Board {
     HashMap<Coordinates, Piece> pieces = new HashMap<>();
@@ -62,5 +65,31 @@ public class Board {
 
         removePiece(from);
         setPiece(to, piece);
+    }
+
+    public boolean isSquareAttackedByColor(Coordinates coordinates, Color opositeColor) {
+        List<Piece> pieces = getPiecesByColor(opositeColor);
+
+        for (Piece piece : pieces) {
+            Set<Coordinates> attackedSquares = piece.getAttackedSquares(this);
+
+            if (attackedSquares.contains(coordinates)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private List<Piece> getPiecesByColor(Color color) {
+        List<Piece> result = new ArrayList<>();
+
+        for (Piece piece : pieces.values()) {
+            if (piece.color == color) {
+                result.add(piece);
+            }
+        }
+
+        return result;
     }
 }

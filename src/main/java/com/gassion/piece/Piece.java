@@ -36,4 +36,30 @@ abstract public class Piece {
     }
 
     protected abstract Set<CoordinatesShift> getPieceMoves();
+
+
+    public Set<Coordinates> getAttackedSquares(Board board) {
+        Set<CoordinatesShift> pieceAttacks = getPieceAttacks();
+        Set<Coordinates> result = new HashSet<>();
+
+        for (CoordinatesShift pieceAttack : pieceAttacks) {
+            if (coordinates.canShift(pieceAttack)) {
+                Coordinates shiftedCoordinates = coordinates.shift(pieceAttack);
+
+                if (isSquareAvailableForAttack(shiftedCoordinates, board)) {
+                    result.add(shiftedCoordinates);
+                }
+            }
+        }
+
+        return result;
+    }
+
+    protected boolean isSquareAvailableForAttack(Coordinates shiftedCoordinates, Board board) {
+        return true;
+    }
+
+    protected Set<CoordinatesShift> getPieceAttacks() {
+        return getPieceMoves();
+    }
 }

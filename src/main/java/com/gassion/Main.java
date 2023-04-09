@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 //        Board board = new Board();
 //        board.setupDefaultPeacesPositions();
-        Board board = new BoardFactory().fromFen("8/8/8/8/1R1n4/2P5/8/8 - w");
+        Board board = new BoardFactory().fromFen("5r2/8/1b2p3/8/1n2KR2/2P5/8/8 - w");
  //      new BoardConsoleRenderer().render(board);
 //
 //        Piece piece = board.getPiece(new Coordinates( File.B, 1));
