@@ -60,11 +60,11 @@ public class Board {
         pieces.remove(coordinates);
     }
 
-    public void movePiece(Coordinates from, Coordinates to) {
-        Piece piece = getPiece(from);
+    public void movePiece(Move move) {
+        Piece piece = getPiece(move.from);
 
-        removePiece(from);
-        setPiece(to, piece);
+        removePiece(move.from);
+        setPiece(move.to, piece);
     }
 
     public boolean isSquareAttackedByColor(Coordinates coordinates, Color opositeColor) {

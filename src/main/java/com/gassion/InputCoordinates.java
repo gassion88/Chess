@@ -73,6 +73,19 @@ public class InputCoordinates {
         }
     }
 
+    public static Move inputMove(Board board, Color color, BoardConsoleRenderer boardConsoleRenderer) {
+        Coordinates sourceCoordinates = InputCoordinates.inputPieceCoordinatesForColor(
+                color, board
+        );
+
+        Piece piece = board.getPiece(sourceCoordinates);
+        Set<Coordinates> availableMoveSquare = piece.getAvailableMoveSquares(board);
+        boardConsoleRenderer.render(board, piece);
+        Coordinates targerCoordinates = InputCoordinates.inputAvailableSquare(availableMoveSquare);
+
+        return new Move(targerCoordinates, sourceCoordinates);
+    }
+
     public static Coordinates inputAvailableSquare(Set<Coordinates> coordinates) {
         while (true) {
             System.out.println("Enter move for selected piece");
