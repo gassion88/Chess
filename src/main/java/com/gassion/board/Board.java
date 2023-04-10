@@ -92,7 +92,7 @@ public class Board {
         return false;
     }
 
-    private List<Piece> getPiecesByColor(Color color) {
+    public List<Piece> getPiecesByColor(Color color) {
         List<Piece> result = new ArrayList<>();
 
         for (Piece piece : pieces.values()) {

@@ -26,7 +26,7 @@ public class Game {
 
             Move move = InputCoordinates.inputMove(board, isWhiteToMove ? Color.WHITE : Color.BLACK, boardConsoleRenderer);
 
-            board.movePiece(move);
+            board.makeMove(move);
 
             isWhiteToMove = !isWhiteToMove;
 

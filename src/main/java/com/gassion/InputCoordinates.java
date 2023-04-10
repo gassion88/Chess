@@ -2,7 +2,9 @@ package com.gassion;
 
 import com.gassion.board.Board;
 import com.gassion.board.BoardConsoleRenderer;
+import com.gassion.board.BoardFactory;
 import com.gassion.board.Move;
+import com.gassion.piece.King;
 import com.gassion.piece.Piece;
 
 import java.util.Scanner;
@@ -87,7 +89,7 @@ public class InputCoordinates {
             boardConsoleRenderer.render(board, piece);
             Coordinates targerCoordinates = InputCoordinates.inputAvailableSquare(availableMoveSquare);
 
-            Move move = new Move(targerCoordinates, sourceCoordinates);
+            Move move = new Move(sourceCoordinates, targerCoordinates);
 
             if (validateIfKingInCheckAfterMove(board, color, move)) {
                 System.out.println("Your king is ander attack");
@@ -99,7 +101,11 @@ public class InputCoordinates {
     }
 
     private static boolean validateIfKingInCheckAfterMove(Board board, Color color, Move move) {
-        return false;
+        Board copyBoard = new BoardFactory().copy(board);
+        copyBoard.makeMove(move);
+
+        Piece king = copyBoard.getPiecesByColor(color).stream().filter(piece -> piece instanceof King).findFirst().get();
+        return copyBoard.isSquareAttackedByColor(king.coordinates, color.oposite());
     }
 
     public static Coordinates inputAvailableSquare(Set<Coordinates> coordinates) {
