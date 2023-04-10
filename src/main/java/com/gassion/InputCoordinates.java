@@ -1,5 +1,8 @@
 package com.gassion;
 
+import com.gassion.board.Board;
+import com.gassion.board.BoardConsoleRenderer;
+import com.gassion.board.Move;
 import com.gassion.piece.Piece;
 
 import java.util.Scanner;
@@ -74,16 +77,29 @@ public class InputCoordinates {
     }
 
     public static Move inputMove(Board board, Color color, BoardConsoleRenderer boardConsoleRenderer) {
-        Coordinates sourceCoordinates = InputCoordinates.inputPieceCoordinatesForColor(
-                color, board
-        );
+        while (true) {
+            Coordinates sourceCoordinates = InputCoordinates.inputPieceCoordinatesForColor(
+                    color, board
+            );
 
-        Piece piece = board.getPiece(sourceCoordinates);
-        Set<Coordinates> availableMoveSquare = piece.getAvailableMoveSquares(board);
-        boardConsoleRenderer.render(board, piece);
-        Coordinates targerCoordinates = InputCoordinates.inputAvailableSquare(availableMoveSquare);
+            Piece piece = board.getPiece(sourceCoordinates);
+            Set<Coordinates> availableMoveSquare = piece.getAvailableMoveSquares(board);
+            boardConsoleRenderer.render(board, piece);
+            Coordinates targerCoordinates = InputCoordinates.inputAvailableSquare(availableMoveSquare);
 
-        return new Move(targerCoordinates, sourceCoordinates);
+            Move move = new Move(targerCoordinates, sourceCoordinates);
+
+            if (validateIfKingInCheckAfterMove(board, color, move)) {
+                System.out.println("Your king is ander attack");
+                continue;
+            }
+
+            return move;
+        }
+    }
+
+    private static boolean validateIfKingInCheckAfterMove(Board board, Color color, Move move) {
+        return false;
     }
 
     public static Coordinates inputAvailableSquare(Set<Coordinates> coordinates) {
@@ -100,13 +116,5 @@ public class InputCoordinates {
         }
 
 
-    }
-
-    public static void main(String[] args) {
-        Board board = new Board();
-        board.setupDefaultPeacesPositions();
-
-        Coordinates coordinates = inputPieceCoordinatesForColor(Color.WHITE, board);
-        System.out.println(coordinates);
     }
 }

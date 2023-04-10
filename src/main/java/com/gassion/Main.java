@@ -1,9 +1,7 @@
 package com.gassion;
 
-import com.gassion.piece.Knight;
-import com.gassion.piece.Piece;
-
-import java.util.Set;
+import com.gassion.board.Board;
+import com.gassion.board.BoardFactory;
 
 public class Main {
     public static void main(String[] args) {

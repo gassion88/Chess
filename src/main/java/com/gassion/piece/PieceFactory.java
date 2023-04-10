@@ -1,5 +1,7 @@
-package com.gassion;
+package com.gassion.piece;
 
+import com.gassion.Color;
+import com.gassion.Coordinates;
 import com.gassion.piece.*;
 
 public class PieceFactory {

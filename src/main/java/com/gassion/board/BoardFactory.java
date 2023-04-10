@@ -1,12 +1,13 @@
-package com.gassion;
+package com.gassion.board;
 
-import com.gassion.piece.Pawn;
-import com.gassion.piece.Piece;
+import com.gassion.Coordinates;
+import com.gassion.File;
+import com.gassion.piece.PieceFactory;
 
 public class BoardFactory {
     private PieceFactory pieceFactory = new PieceFactory();
     public Board fromFen(String fen) {
-        Board board = new Board();
+        Board board = new Board(fen);
         String[] parts = fen.split(" ");
         String piecePositions = parts[0];
 

@@ -1,4 +1,7 @@
-package com.gassion;
+package com.gassion.board;
+
+import com.gassion.Coordinates;
+import com.gassion.File;
 
 import java.util.ArrayList;
 import java.util.List;

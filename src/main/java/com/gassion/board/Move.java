@@ -1,4 +1,6 @@
-package com.gassion;
+package com.gassion.board;
+
+import com.gassion.Coordinates;
 
 public class Move {
     public final Coordinates from, to;

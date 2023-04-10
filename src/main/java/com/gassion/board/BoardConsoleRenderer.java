@@ -1,5 +1,9 @@
-package com.gassion;
+package com.gassion.board;
 
+import com.gassion.Color;
+import com.gassion.Coordinates;
+import com.gassion.File;
+import com.gassion.board.Board;
 import com.gassion.piece.Piece;
 
 import java.util.Set;

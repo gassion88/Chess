@@ -1,7 +1,7 @@
 package com.gassion.piece;
 
-import com.gassion.Board;
-import com.gassion.BoardUtils;
+import com.gassion.board.Board;
+import com.gassion.board.BoardUtils;
 import com.gassion.Color;
 import com.gassion.Coordinates;
 

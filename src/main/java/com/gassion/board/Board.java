@@ -1,5 +1,8 @@
-package com.gassion;
+package com.gassion.board;
 
+import com.gassion.Color;
+import com.gassion.Coordinates;
+import com.gassion.File;
 import com.gassion.piece.*;
 
 import java.util.ArrayList;
@@ -8,7 +11,12 @@ import java.util.List;
 import java.util.Set;
 
 public class Board {
+    final String startingFen;
     HashMap<Coordinates, Piece> pieces = new HashMap<>();
+
+    public Board(String startingFen) {
+        this.startingFen = startingFen;
+    }
 
     public void setPiece(Coordinates coordinates, Piece piece) {
         piece.coordinates = coordinates;

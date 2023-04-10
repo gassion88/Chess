@@ -1,8 +1,8 @@
 package com.gassion;
 
-import com.gassion.piece.Piece;
-
-import java.util.Set;
+import com.gassion.board.Board;
+import com.gassion.board.BoardConsoleRenderer;
+import com.gassion.board.Move;
 
 public class Game {
     private final Board board;
