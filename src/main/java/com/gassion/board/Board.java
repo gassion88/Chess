@@ -12,7 +12,8 @@ import java.util.Set;
 
 public class Board {
     final String startingFen;
-    HashMap<Coordinates, Piece> pieces = new HashMap<>();
+    public HashMap<Coordinates, Piece> pieces = new HashMap<>();
+    public List<Move> moves = new ArrayList<>();
 
     public Board(String startingFen) {
         this.startingFen = startingFen;
@@ -68,11 +69,13 @@ public class Board {
         pieces.remove(coordinates);
     }
 
-    public void movePiece(Move move) {
+    public void makeMove(Move move) {
         Piece piece = getPiece(move.from);
 
         removePiece(move.from);
         setPiece(move.to, piece);
+
+        moves.add(move);
     }
 
     public boolean isSquareAttackedByColor(Coordinates coordinates, Color opositeColor) {

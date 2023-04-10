@@ -35,4 +35,14 @@ public class BoardFactory {
 
         return board;
     }
+
+    public Board copy(Board source) {
+        Board clone = fromFen(source.startingFen);
+
+        for (Move move : source.moves) {
+            clone.makeMove(move);
+        }
+
+        return clone;
+    }
 }
