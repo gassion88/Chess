@@ -11,7 +11,8 @@ public class Game {
     private final Board board;
     private final BoardConsoleRenderer boardConsoleRenderer = new BoardConsoleRenderer();
     private final List<GameStateChecker> checkers = List.of(
-            new StalemateGameStateChecker()
+            new StalemateGameStateChecker(),
+            new CheckmateGameStateChecker()
     );
 
     public Game(Board board) {
