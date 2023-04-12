@@ -18,6 +18,12 @@ public class InputCoordinates {
             System.out.println("Please enter coordinates ex: A1");
 
             String line = scanner.nextLine();
+
+            if (line.length() != 2) {
+                System.out.println("Invalid coordinates format!");
+                continue;
+            }
+
             char fileChar = line.charAt(0);
             char rankChar = line.charAt(1);
 
@@ -120,7 +126,5 @@ public class InputCoordinates {
 
             return input;
         }
-
-
     }
 }
