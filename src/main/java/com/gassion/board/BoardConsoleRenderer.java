@@ -59,10 +59,7 @@ public class BoardConsoleRenderer {
             case "King" -> "♚";
             default -> "";
         };
-
     }
-
-
 
     private String getStringForEmptySquare(Coordinates coordinates, boolean isHighLighted) {
         return colorizeSprite("      ", Color.WHITE, Board.isSquareDark(coordinates), isHighLighted);
