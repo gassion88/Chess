@@ -28,6 +28,7 @@ abstract public class Piece {
                 }
             }
         }
+
         return result;
     }
 
@@ -36,7 +37,6 @@ abstract public class Piece {
     }
 
     protected abstract Set<CoordinatesShift> getPieceMoves();
-
 
     public Set<Coordinates> getAttackedSquares(Board board) {
         Set<CoordinatesShift> pieceAttacks = getPieceAttacks();
